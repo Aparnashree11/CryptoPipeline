@@ -1,0 +1,82 @@
+{
+  "test_name": "rf_vs_gb_v1",
+  "model_a": "random_forest",
+  "model_b": "gradient_boosting",
+  "model_a_metrics": {
+    "accuracy": 0.5714285714285714,
+    "predictions": 14,
+    "avg_confidence": 0.5497142857142857,
+    "correct": 8
+  },
+  "model_b_metrics": {
+    "accuracy": 0.2,
+    "predictions": 15,
+    "avg_confidence": 0.7226,
+    "correct": 3
+  },
+  "winner": "A",
+  "confidence": "high",
+  "evaluation_time": "2025-10-03T15:00:24.886264",
+  "per_symbol": [
+    {
+      "symbol": "bitcoin",
+      "model_version": "A",
+      "predictions": 3,
+      "accuracy": 1.0
+    },
+    {
+      "symbol": "bitcoin",
+      "model_version": "B",
+      "predictions": 3,
+      "accuracy": 0.0
+    },
+    {
+      "symbol": "cardano",
+      "model_version": "A",
+      "predictions": 2,
+      "accuracy": 0.5
+    },
+    {
+      "symbol": "cardano",
+      "model_version": "B",
+      "predictions": 3,
+      "accuracy": 1.0
+    },
+    {
+      "symbol": "ethereum",
+      "model_version": "A",
+      "predictions": 3,
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "symbol": "ethereum",
+      "model_version": "B",
+      "predictions": 3,
+      "accuracy": 0.0
+    },
+    {
+      "symbol": "polkadot",
+      "model_version": "A",
+      "predictions": 3,
+      "accuracy": 0.6666666666666666
+    },
+    {
+      "symbol": "polkadot",
+      "model_version": "B",
+      "predictions": 3,
+      "accuracy": 0.0
+    },
+    {
+      "symbol": "solana",
+      "model_version": "A",
+      "predictions": 3,
+      "accuracy": 0.3333333333333333
+    },
+    {
+      "symbol": "solana",
+      "model_version": "B",
+      "predictions": 3,
+      "accuracy": 0.0
+    }
+  ]
+}
