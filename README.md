@@ -22,11 +22,12 @@ airflow_lab/
     ab_testing.py               # Compares two model versions; saves results (every 2 hours)
     monitoring_dashboard.py     # Generates dashboard and stores monitoring metrics (*/30 mins)
     auto_retrain.py             # Triggers retraining when thresholds exceed (every 6 hours)
-    historical_data.py          # Standalone backfill script for extended OHLCV history
   models/                       # Persisted trained model artifacts (.pkl) and scaling JSON
   dashboard/                    # Generated HTML dashboard and A/B test JSON
   logs/                         # Airflow logs
   plugins/                      # (empty placeholder)
+  data/               
+    historical_data.py          # Standalone backfill script for extended OHLCV history
   docker-compose.yml            # Airflow Webserver, Scheduler, Postgres
   dockerfile                    # Airflow 2.7 base + Python deps
   requirements.txt              # Python dependencies for the Airflow image
@@ -144,7 +145,7 @@ Populate `ohlcv_data` with extended history to improve features/training:
 
 ```bash
 # Execute inside the webserver or scheduler container
-docker compose exec airflow-webserver bash -lc "python /opt/airflow/dags/historical_data.py"
+docker compose exec airflow-webserver bash -lc "python /opt/airflow/data/historical_data.py"
 ```
 
 This script fetches up to ~1 year of hourly OHLCV per symbol and writes to Postgres.

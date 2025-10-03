@@ -33,6 +33,7 @@ services:
       - ./plugins:/opt/airflow/plugins
       - ./models:/opt/airflow/models
       - ./dashboard:/opt/airflow/dashboard
+      - ./data:/opt/airflow/data
     ports:
       - "8080:8080"
     command: >
@@ -57,6 +58,7 @@ services:
       - ./plugins:/opt/airflow/plugins
       - ./models:/opt/airflow/models
       - ./dashboard:/opt/airflow/dashboard
+      - ./data:/opt/airflow/data
     command: airflow scheduler
 
 volumes:
