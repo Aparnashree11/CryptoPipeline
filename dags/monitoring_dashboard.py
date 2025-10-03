@@ -668,7 +668,7 @@ def generate_html_dashboard(**context):
         ab_results = context['ti'].xcom_pull(task_ids='calc_ab_testing')
         retrain_events = context['ti'].xcom_pull(task_ids='calc_retraining_events')
 
-        html = "<div class='section'><h2>A/B Testing (Last 30 Days)</h2>"
+        html += "<div class='section'><h2>A/B Testing (Last 30 Days)</h2>"
 
         if ab_results:
             html += """
@@ -699,7 +699,7 @@ def generate_html_dashboard(**context):
         html += "</div>"
 
         # Retraining Section
-        html = "<div class='section'><h2>Retraining Events (Last 30 Days)</h2>"
+        html += "<div class='section'><h2>Retraining Events (Last 30 Days)</h2>"
         if retrain_events:
             html += "<table>"
             html += "<tr><th>Decision</th><th>Details</th><th>Created At</th></tr>"
@@ -724,7 +724,7 @@ def generate_html_dashboard(**context):
         html+="</div>"
 
         # Append to final HTML
-        html = html + "</body></html>"
+        html += "</body></html>"
         
         # Save dashboard
         import os
