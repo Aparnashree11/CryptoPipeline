@@ -1,4 +1,4 @@
-## Crypto ML Pipeline with Airflow
+## Crypto ML Pipeline with Airflow (MLOps Lab2)
 
 This project is an end-to-end MLOps lab that orchestrates cryptocurrency data pipelines and ML workflows using Apache Airflow. It ingests market data, engineers features, trains and evaluates multiple models, performs hourly inference, runs A/B tests between model variants, and generates a live monitoring dashboard. All services run locally via Docker Compose.
 
